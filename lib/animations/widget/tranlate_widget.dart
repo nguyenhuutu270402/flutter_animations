@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'dart:math' as math;
 
-class RotatingWidget extends StatefulWidget {
+class AnimatedTranlateWidget extends StatefulWidget {
+  const AnimatedTranlateWidget({super.key});
+
   @override
-  _RotatingWidgetState createState() => _RotatingWidgetState();
+  State<AnimatedTranlateWidget> createState() => _AnimatedTranlateWidgetState();
 }
 
-class _RotatingWidgetState extends State<RotatingWidget>
+class _AnimatedTranlateWidgetState extends State<AnimatedTranlateWidget>
     with SingleTickerProviderStateMixin {
   late AnimationController _animationController;
 
@@ -32,8 +33,10 @@ class _RotatingWidgetState extends State<RotatingWidget>
     return AnimatedBuilder(
       animation: _animationController,
       builder: (context, child) {
-        return Transform.rotate(
-          angle: _animationController.value * 2.0 * math.pi,
+        return Transform.translate(
+          // angle: _animationController.value * 2.0 * math.pi,
+          offset: Offset(_animationController.value * 200,
+              _animationController.value * 400),
           child: Container(
             width: 200,
             height: 200,
