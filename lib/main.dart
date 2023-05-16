@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/animations/animations_page1.dart';
 import 'package:my_app/box_designs/box_glass_page.dart';
 import 'package:my_app/box_designs/box_shadow_page.dart';
 
@@ -13,8 +14,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'App Test',
-        home: BoxGlassPage());
+      debugShowCheckedModeBanner: false,
+      title: 'App Test',
+      themeMode: ThemeMode.light,
+      home: AnimationPage1(),
+    );
   }
 }
