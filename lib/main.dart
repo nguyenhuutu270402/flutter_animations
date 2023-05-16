@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/box_designs/box_glass_page.dart';
+import 'package:my_app/box_designs/box_shadow_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,13 +13,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'WhatsApp Me',
-      home: Scaffold(
-        body: Center(
-          child: Text('Demo'),
-        ),
-      ),
-    );
+        debugShowCheckedModeBanner: false,
+        title: 'WhatsApp Me',
+        home: BoxGlassPage());
   }
 }
